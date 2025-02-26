@@ -29,7 +29,7 @@ def handle_missing_values(df):
 
 ### Reduce Noise
 Random or irrelevant data can result in unpredictable situations that are different from what we expected, which is known as noise.
-Lets correct the AirBags data as mentione in the code.
+Lets correct the AirBags data as mention in the code.
 
 **_Code_**
 
@@ -40,298 +40,81 @@ def reduce_noise(df):
     return df
 ```
 
-![image](https://github.com/user-attachments/assets/bec7ebe4-591f-4de3-8dd5-fe65bdb0c849)
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Manufacturer</th>
-      <th>Model</th>
-      <th>Type</th>
-      <th>Min.Price</th>
-      <th>Price</th>
-      <th>Max.Price</th>
-      <th>MPG.city</th>
-      <th>MPG.highway</th>
-      <th>AirBags</th>
-      <th>DriveTrain</th>
-      <th>...</th>
-      <th>Fuel.tank.capacity</th>
-      <th>Passengers</th>
-      <th>Length</th>
-      <th>Wheelbase</th>
-      <th>Width</th>
-      <th>Turn.circle</th>
-      <th>Rear.seat.room</th>
-      <th>Luggage.room</th>
-      <th>Weight</th>
-      <th>Origin</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Acura</td>
-      <td>Integra</td>
-      <td>Small</td>
-      <td>12.9</td>
-      <td>15.9</td>
-      <td>18.8</td>
-      <td>25</td>
-      <td>31</td>
-      <td>Driver</td>
-      <td>Front</td>
-      <td>...</td>
-      <td>13.2</td>
-      <td>5</td>
-      <td>177</td>
-      <td>102</td>
-      <td>68</td>
-      <td>37</td>
-      <td>26.5</td>
-      <td>11.0</td>
-      <td>2705</td>
-      <td>non-USA</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Acura</td>
-      <td>Legend</td>
-      <td>Midsize</td>
-      <td>29.2</td>
-      <td>33.9</td>
-      <td>38.7</td>
-      <td>18</td>
-      <td>25</td>
-      <td>Both</td>
-      <td>Front</td>
-      <td>...</td>
-      <td>18.0</td>
-      <td>5</td>
-      <td>195</td>
-      <td>115</td>
-      <td>71</td>
-      <td>38</td>
-      <td>30.0</td>
-      <td>15.0</td>
-      <td>3560</td>
-      <td>non-USA</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Audi</td>
-      <td>90</td>
-      <td>Compact</td>
-      <td>25.9</td>
-      <td>29.1</td>
-      <td>32.3</td>
-      <td>20</td>
-      <td>26</td>
-      <td>Driver</td>
-      <td>Front</td>
-      <td>...</td>
-      <td>16.9</td>
-      <td>5</td>
-      <td>180</td>
-      <td>102</td>
-      <td>67</td>
-      <td>37</td>
-      <td>28.0</td>
-      <td>14.0</td>
-      <td>3375</td>
-      <td>non-USA</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Audi</td>
-      <td>100</td>
-      <td>Midsize</td>
-      <td>30.8</td>
-      <td>37.7</td>
-      <td>44.6</td>
-      <td>19</td>
-      <td>26</td>
-      <td>Both</td>
-      <td>Front</td>
-      <td>...</td>
-      <td>21.1</td>
-      <td>6</td>
-      <td>193</td>
-      <td>106</td>
-      <td>70</td>
-      <td>37</td>
-      <td>31.0</td>
-      <td>17.0</td>
-      <td>3405</td>
-      <td>non-USA</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>BMW</td>
-      <td>535i</td>
-      <td>Midsize</td>
-      <td>23.7</td>
-      <td>30.0</td>
-      <td>36.2</td>
-      <td>22</td>
-      <td>30</td>
-      <td>Driver</td>
-      <td>Rear</td>
-      <td>...</td>
-      <td>21.1</td>
-      <td>4</td>
-      <td>186</td>
-      <td>109</td>
-      <td>69</td>
-      <td>39</td>
-      <td>27.0</td>
-      <td>13.0</td>
-      <td>3640</td>
-      <td>non-USA</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>88</th>
-      <td>Volkswagen</td>
-      <td>Eurovan</td>
-      <td>Van</td>
-      <td>16.6</td>
-      <td>19.7</td>
-      <td>22.7</td>
-      <td>17</td>
-      <td>21</td>
-      <td>Driver</td>
-      <td>Front</td>
-      <td>...</td>
-      <td>21.1</td>
-      <td>7</td>
-      <td>187</td>
-      <td>115</td>
-      <td>72</td>
-      <td>38</td>
-      <td>34.0</td>
-      <td>14.0</td>
-      <td>3960</td>
-      <td>non-USA</td>
-    </tr>
-    <tr>
-      <th>89</th>
-      <td>Volkswagen</td>
-      <td>Passat</td>
-      <td>Compact</td>
-      <td>17.6</td>
-      <td>20.0</td>
-      <td>22.4</td>
-      <td>21</td>
-      <td>30</td>
-      <td>Driver</td>
-      <td>Front</td>
-      <td>...</td>
-      <td>18.5</td>
-      <td>5</td>
-      <td>180</td>
-      <td>103</td>
-      <td>67</td>
-      <td>35</td>
-      <td>31.5</td>
-      <td>14.0</td>
-      <td>2985</td>
-      <td>non-USA</td>
-    </tr>
-    <tr>
-      <th>90</th>
-      <td>Volkswagen</td>
-      <td>Corrado</td>
-      <td>Sporty</td>
-      <td>22.9</td>
-      <td>23.3</td>
-      <td>23.7</td>
-      <td>18</td>
-      <td>25</td>
-      <td>Driver</td>
-      <td>Front</td>
-      <td>...</td>
-      <td>18.5</td>
-      <td>4</td>
-      <td>159</td>
-      <td>97</td>
-      <td>66</td>
-      <td>36</td>
-      <td>26.0</td>
-      <td>15.0</td>
-      <td>2810</td>
-      <td>non-USA</td>
-    </tr>
-    <tr>
-      <th>91</th>
-      <td>Volvo</td>
-      <td>240</td>
-      <td>Compact</td>
-      <td>21.8</td>
-      <td>22.7</td>
-      <td>23.5</td>
-      <td>21</td>
-      <td>28</td>
-      <td>Driver</td>
-      <td>Rear</td>
-      <td>...</td>
-      <td>15.8</td>
-      <td>5</td>
-      <td>190</td>
-      <td>104</td>
-      <td>67</td>
-      <td>37</td>
-      <td>29.5</td>
-      <td>14.0</td>
-      <td>2985</td>
-      <td>non-USA</td>
-    </tr>
-    <tr>
-      <th>92</th>
-      <td>Volvo</td>
-      <td>850</td>
-      <td>Midsize</td>
-      <td>24.8</td>
-      <td>26.7</td>
-      <td>28.5</td>
-      <td>20</td>
-      <td>28</td>
-      <td>Both</td>
-      <td>Front</td>
-      <td>...</td>
-      <td>19.3</td>
-      <td>5</td>
-      <td>184</td>
-      <td>105</td>
-      <td>69</td>
-      <td>38</td>
-      <td>30.0</td>
-      <td>15.0</td>
-      <td>3245</td>
-      <td>non-USA</td>
-    </tr>
-  </tbody>
-</table>
+![image](https://github.com/user-attachments/assets/269cdd13-9569-47d6-9b43-03f1ed6c5f18)
+
+### Encode Categorical Features
+Here we are going to encode String fields like AirBags also doing encoding based on category like based on type we can have different column with true and false values.
+
+**_Code_**
+
+```python
+def encode_categorical(df):
+    """Encodes nominal and ordinal categorical features."""
+    label_encoders = {}
+    # Ordinal Encoding for Airbags
+    airbags_order = {'No Airbags': 0, 'Driver': 1, 'Both': 2}
+    df['AirBags'] = df['AirBags'].map(airbags_order)
+    # One-Hot Encoding for other categorical variables
+    df = pd.get_dummies(df, columns=['Type', 'DriveTrain', 'Man.trans.avail', 'Origin'], drop_first=True)
+    return df
+```
+![image](https://github.com/user-attachments/assets/56abf531-44c3-441b-b79d-dd28aa87a485)
+
+### Normalize Features
+Here we will scale using Scales numerical features using MinMaxScaler or StandardScaler so that data can be fitted in graph.
+
+**_Code_**
+
+```python
+def normalize_features(df, method='minmax'):
+    """Scales numerical features using MinMaxScaler or StandardScaler."""
+    scaler = MinMaxScaler() if method == 'minmax' else StandardScaler()
+    numerical_columns = df.select_dtypes(include=['int64', 'float64']).columns
+    df[numerical_columns] = scaler.fit_transform(df[numerical_columns])
+    return df
+```
+![image](https://github.com/user-attachments/assets/d720ee14-0856-4b23-bf46-a48efe843075)
+
+### Split Data
+Split data into Train validation and Test sets in the ration of [70:20:10]
+
+**_Code_**
+
+```python
+def split_data(df, target_column='Price'):
+    """Splits data into train (70%), validation (20%), and test (10%)."""
+    X = df.drop(columns=[target_column])
+    y = df[target_column]
+    X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.3, random_state=42)
+    X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=1/3, random_state=42)
+    return X_train, X_val, X_test, y_train, y_val, y_test
+```
+
+## Q2a: Linear Regression Task
+Use the “linear_regression_dataset.csv”
+Implement the linear regression model to predict the dependency between two variables.
+1. Implement linear regression using the inbuilt function “LinearRegression” model in sklearn.
+2. Print the coefficient obtained from linear regression and plot a straight line on the scatter plot.
+3. Now, implement linear regression without the use of any inbuilt function.
+4. Compare the results of 1 and 3 graphically.
+
+### Linear Regression - Inbuild Function
+
+```python
+print(f"Sklearn Linear Regression: Coefficient = {model.coef_[0]}, Intercept = {model.intercept_}")
+```
+Sklearn Linear Regression: Coefficient = 63.1317191283293, Intercept = -42.178608958837785
+### Linear Regression - Manual
+```python
+mean_x = np.mean(X_train_np)
+mean_y = np.mean(y_train_np)
+m = np.sum((X_train_np - mean_x) * (y_train_np - mean_y)) / np.sum((X_train_np - mean_x)**2)
+b = mean_y - m * mean_x
+y_pred_manual = m * X_test.to_numpy().flatten() + b
+print(f"Manual Linear Regression: Coefficient = {m}, Intercept = {b}")
+```
+Manual Linear Regression: Coefficient = 63.1317191283293, Intercept = -42.178608958837785
+
+### Compare results graphically
+
+![image](https://github.com/user-attachments/assets/4380c455-e985-4c82-9cb5-24d75d617670)
